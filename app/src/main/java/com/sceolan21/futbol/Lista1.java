@@ -29,7 +29,6 @@ public class Lista1 extends ListFragment {
               }
             }
 
-
             setListAdapter(new Adaptador(getActivity(), R.layout.layout_listado2,  ENTRADAS_FINAL) {
                 @Override
                 public void onEntrada(Object entrada, View view) {
@@ -53,7 +52,7 @@ public class Lista1 extends ListFragment {
                 Integer y=(int)id;
                 Bundle arguments = new Bundle();
                 arguments.putString("identificador",  ENTRADAS_FINAL.get(y).id);
-                Fragmento2 fragment = new Fragmento2();
+                FragmentoWeb fragment = new FragmentoWeb();
                 fragment.setArguments(arguments);
                 getFragmentManager().beginTransaction().replace(R.id.frame_contenedor, fragment).commit();
 

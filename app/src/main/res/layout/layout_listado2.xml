@@ -10,6 +10,7 @@
         android:id="@+id/imagenlista"
         android:layout_width="110dp"
         android:layout_height="80dp"
+        android:layout_margin="10dp"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         android:contentDescription="Descripción del contenido de la imagen"
@@ -25,3 +26,4 @@
         android:textColor="#293444" />
 
 </LinearLayout>
+

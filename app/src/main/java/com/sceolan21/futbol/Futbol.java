@@ -2,6 +2,9 @@ package com.sceolan21.futbol;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
+import android.media.MediaPlayer;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -14,6 +17,9 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.media.SoundPool;
+
+import java.io.IOException;
 
 import static android.content.res.Configuration.ORIENTATION_PORTRAIT;
 
@@ -24,8 +30,11 @@ public class Futbol extends AppCompatActivity implements Fragmento1.Callbacks{
     private DrawerLayout drawerLayout;
     private String titulo;
 
+    MediaPlayer mp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_futbol);
         setToolbar();
@@ -43,6 +52,8 @@ public class Futbol extends AppCompatActivity implements Fragmento1.Callbacks{
         if (findViewById(R.id.frame_contenedor) != null) {
             dosFragmentos = true;
         }
+
+        mp = MediaPlayer.create(this, R.raw.sonido);
     }
 
 
@@ -100,6 +111,20 @@ public class Futbol extends AppCompatActivity implements Fragmento1.Callbacks{
         switch (item.getItemId()) {
             case android.R.id.home:
                 drawerLayout.openDrawer(GravityCompat.START);
+                return true;
+            case R.id.iniciarsonido:
+                mp.start();
+                return true;
+            case R.id.pausarsonido:
+                mp.pause();
+                return true;
+            case R.id.pararsonido:
+                mp.stop();
+                try {
+                    mp.prepare();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 return true;
         }
         return super.onOptionsItemSelected(item);

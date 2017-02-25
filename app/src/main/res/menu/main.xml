@@ -1,10 +1,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
+    tools:context=".Futbol">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/iniciarsonido"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="@string/start"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/pausarsonido"
+        android:orderInCategory="100"
+        android:title="@string/pause"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/pararsonido"
+        android:orderInCategory="100"
+        android:title="@string/stop"
         app:showAsAction="never" />
 </menu>

@@ -9,11 +9,11 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 
-public class Fragmento2 extends Fragment {
+public class FragmentoWeb extends Fragment {
 
    private Contenido.Lista_entrada2 mItem;
 
-    public Fragmento2() {
+    public FragmentoWeb() {
     }
 
     @Override
@@ -28,7 +28,7 @@ public class Fragmento2 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.layout_detalle, container, false);
+        View rootView = inflater.inflate(R.layout.layout_web, container, false);
 
         if (mItem != null) {
 

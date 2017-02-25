@@ -29,7 +29,7 @@
             android:parentActivityName=".Futbol" >
         </activity>
         <activity
-            android:name=".Fragmento2"
+            android:name=".FragmentoWeb"
             android:label="@string/app_name"
             android:parentActivityName=".Futbol" >
         </activity>

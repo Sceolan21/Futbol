@@ -17,7 +17,7 @@ public class Fragmentos extends FragmentActivity {
         if (savedInstanceState == null) {
             Bundle arguments = new Bundle();
             arguments.putString("identificador", getIntent().getStringExtra("identificador"));
-            Fragmento2 fragment = new Fragmento2();
+            FragmentoWeb fragment = new FragmentoWeb();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction().add(R.id.frame_contenedor, fragment).commit();
         }

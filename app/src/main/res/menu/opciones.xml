@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <group android:checkableBehavior="single">
         <item
@@ -20,21 +21,26 @@
 
         <!-- Sección de configuración -->
         <item
-            android:id="@+id/opciones"
+            android:id="@+id/menu2"
             android:title="@string/menu2_titulo">
             <menu>
                 <item
-                    android:id="@+id/ayuda"
+                    android:id="@+id/premier"
                     android:icon="@drawable/premier"
                     android:title="@string/menu2_1" />
                 <item
-                    android:id="@+id/busqueda"
+                    android:id="@+id/bundesliga"
                     android:icon="@drawable/bundesliga"
                     android:title="@string/menu2_2" />
                 <item
-                    android:id="@+id/salida"
+                android:id="@+id/seriea"
+                android:icon="@drawable/seriea"
+                android:title="@string/menu2_3" />
+                <item
+                    android:id="@+id/misonido"
                     android:icon="@drawable/seriea"
-                    android:title="@string/menu2_3" />
+                    android:title="@string/menu2_3"
+                    app:showAsAction="always"/>
             </menu>
         </item>
     </group>
