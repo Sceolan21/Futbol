@@ -4,6 +4,10 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
 public class Fragmentos extends FragmentActivity {
+    public static final String ARG_SECTION_TITLE = "opcion";
+
+    public Fragmentos() {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +21,14 @@ public class Fragmentos extends FragmentActivity {
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction().add(R.id.frame_contenedor, fragment).commit();
         }
+    }
+
+    public static Fragmentos newInstance(String sectionTitle) {
+        Fragmentos fragment = new Fragmentos();
+        Bundle args = new Bundle();
+        args.putString(ARG_SECTION_TITLE, sectionTitle);
+        //fragment.setArguments(args);
+        return fragment;
     }
 
 }

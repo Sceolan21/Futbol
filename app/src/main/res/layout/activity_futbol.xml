@@ -1,8 +1,26 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/fragment_listado"
-    android:name="com.sceolan21.futbol.Fragmento1"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="0dp"
-    android:layout_marginRight="0dp"
-    android:background="#77FF03" />
+    android:fitsSystemWindows="true"
+    tools:context=".Futbol">
+
+    <!-- Contenido Principal -->
+    <include layout="@layout/contenido" />
+
+    <!-- Menú Deslizante -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigator"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:background="#c4c6d4"
+        app:headerLayout="@layout/cabecera"
+        app:menu="@menu/opciones" />
+
+</android.support.v4.widget.DrawerLayout>
+
+

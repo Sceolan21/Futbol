@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu1"
+            android:title="@string/menu1_titulo">
+            <menu>
+                <item
+                    android:id="@+id/nav_home"
+                    android:checked="true"
+                    android:icon="@drawable/liga"
+                    android:title="@string/menu1_1" />
+                <item
+                    android:id="@+id/nav_productos"
+                    android:icon="@drawable/liga123"
+                    android:title="@string/menu1_2" />
+            </menu>
+        </item>
+
+        <!-- Sección de configuración -->
+        <item
+            android:id="@+id/opciones"
+            android:title="@string/menu2_titulo">
+            <menu>
+                <item
+                    android:id="@+id/ayuda"
+                    android:icon="@drawable/premier"
+                    android:title="@string/menu2_1" />
+                <item
+                    android:id="@+id/busqueda"
+                    android:icon="@drawable/bundesliga"
+                    android:title="@string/menu2_2" />
+                <item
+                    android:id="@+id/salida"
+                    android:icon="@drawable/seriea"
+                    android:title="@string/menu2_3" />
+            </menu>
+        </item>
+    </group>
+
+</menu>
