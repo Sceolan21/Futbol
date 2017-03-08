@@ -31,12 +31,10 @@ public class FragmentoWeb extends Fragment {
         View rootView = inflater.inflate(R.layout.layout_web, container, false);
 
         if (mItem != null) {
-
             WebView web= (WebView)rootView.findViewById(R.id.web);
             web.setWebViewClient(new myWebClient());
             web.loadUrl(mItem.getWeb());
             web.getSettings().setJavaScriptEnabled(true);
-
         }
 
         return rootView;

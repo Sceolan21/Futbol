@@ -3,7 +3,7 @@
     android:layout_height="fill_parent"
     android:gravity="center|top"
     android:orientation="vertical"
-    android:background="#77FF03">
+    android:background="#77DD77">
 
    <WebView
        android:id="@+id/web"

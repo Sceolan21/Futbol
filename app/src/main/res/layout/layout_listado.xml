@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:gravity="center|left"
     android:orientation="horizontal"
-    android:background="#77FF03" >
+    android:background="#77DD77" >
 
     <ImageView
         android:id="@+id/imagenlista"
@@ -24,6 +24,5 @@
         android:textStyle="bold"
         android:gravity="center"
         android:textColor="#293444" />
-
 </LinearLayout>
 

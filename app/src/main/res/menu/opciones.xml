@@ -8,12 +8,11 @@
             android:title="@string/menu1_titulo">
             <menu>
                 <item
-                    android:id="@+id/nav_home"
-                    android:checked="true"
+                    android:id="@+id/laliga"
                     android:icon="@drawable/liga"
                     android:title="@string/menu1_1" />
                 <item
-                    android:id="@+id/nav_productos"
+                    android:id="@+id/laliga2"
                     android:icon="@drawable/liga123"
                     android:title="@string/menu1_2" />
             </menu>
@@ -36,11 +35,6 @@
                 android:id="@+id/seriea"
                 android:icon="@drawable/seriea"
                 android:title="@string/menu2_3" />
-                <item
-                    android:id="@+id/misonido"
-                    android:icon="@drawable/seriea"
-                    android:title="@string/menu2_3"
-                    app:showAsAction="always"/>
             </menu>
         </item>
     </group>

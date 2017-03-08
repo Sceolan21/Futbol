@@ -15,9 +15,12 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.media.SoundPool;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import java.io.IOException;
 
@@ -89,9 +92,38 @@ public class Futbol extends AppCompatActivity implements Fragmento1.Callbacks{
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        menuItem.setChecked(true);
-                        String title = menuItem.getTitle().toString();
-                        //selectItem(title);
+                        switch (menuItem.getItemId()) {
+                            case R.id.laliga:
+                                Intent intent = new Intent(getApplicationContext(), Video.class);
+                                intent.putExtra("tituloVideo", "La Liga Santander");
+                                intent.putExtra("rutaVideo", "android.resource://com.sceolan21.futbol/"+R.raw.laliga);
+                                startActivityForResult(intent, 0);
+                                return true;
+                            case R.id.laliga2:
+                                intent = new Intent(getApplicationContext(), Video.class);
+                                intent.putExtra("tituloVideo", "La Liga 1, 2, 3");
+                                intent.putExtra("rutaVideo", "android.resource://com.sceolan21.futbol/"+R.raw.laliga2);
+                                startActivityForResult(intent, 0);
+                                return true;
+                            case R.id.premier:
+                                intent = new Intent(getApplicationContext(), Video.class);
+                                intent.putExtra("tituloVideo", "Premier League");
+                                intent.putExtra("rutaVideo", "android.resource://com.sceolan21.futbol/"+R.raw.premier);
+                                startActivityForResult(intent, 0);
+                                return true;
+                            case R.id.bundesliga:
+                                intent = new Intent(getApplicationContext(), Video.class);
+                                intent.putExtra("tituloVideo", "Bundesliga");
+                                intent.putExtra("rutaVideo", "android.resource://com.sceolan21.futbol/"+R.raw.bundesliga);
+                                startActivityForResult(intent, 0);
+                                return true;
+                            case R.id.seriea:
+                                intent = new Intent(getApplicationContext(), Video.class);
+                                intent.putExtra("tituloVideo", "Serie A");
+                                intent.putExtra("rutaVideo", "android.resource://com.sceolan21.futbol/"+R.raw.seriea);
+                                startActivityForResult(intent, 0);
+                                return true;
+                        }
                         return true;
                     }
                 }
@@ -111,12 +143,19 @@ public class Futbol extends AppCompatActivity implements Fragmento1.Callbacks{
         switch (item.getItemId()) {
             case android.R.id.home:
                 drawerLayout.openDrawer(GravityCompat.START);
+
                 return true;
             case R.id.iniciarsonido:
                 mp.start();
+                Toast toast1 = Toast.makeText(getApplicationContext(), "Iniciar Sonido", Toast.LENGTH_SHORT);
+                toast1.setGravity(Gravity.CENTER | Gravity.BOTTOM, 0, 150);
+                toast1.show();
                 return true;
             case R.id.pausarsonido:
                 mp.pause();
+                Toast toast2 = Toast.makeText(getApplicationContext(), "Pausando Sonido", Toast.LENGTH_SHORT);
+                toast2.setGravity(Gravity.CENTER | Gravity.BOTTOM, 0, 150);
+                toast2.show();
                 return true;
             case R.id.pararsonido:
                 mp.stop();
@@ -125,6 +164,9 @@ public class Futbol extends AppCompatActivity implements Fragmento1.Callbacks{
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+                Toast toast3 = Toast.makeText(getApplicationContext(), "Parar Sonido", Toast.LENGTH_SHORT);
+                toast3.setGravity(Gravity.CENTER | Gravity.BOTTOM, 0, 150);
+                toast3.show();
                 return true;
         }
         return super.onOptionsItemSelected(item);

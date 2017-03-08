@@ -4,10 +4,10 @@
     <string name="start">Iniciar Sonido</string>
     <string name="pause">Pausar Sonido</string>
     <string name="stop">Parar Sonido</string>
-    <string name="menu1_titulo">Futbol Español</string>
+    <string name="menu1_titulo">Videos Futbol Español</string>
     <string name="menu1_1">La Liga Santander</string>
     <string name="menu1_2">La Liga 1, 2, 3</string>
-    <string name="menu2_titulo">Futbol Internacional</string>
+    <string name="menu2_titulo">Videos Futbol Internacional</string>
     <string name="menu2_1">Premier League</string>
     <string name="menu2_2">Bundesliga</string>
     <string name="menu2_3">Serie A</string>

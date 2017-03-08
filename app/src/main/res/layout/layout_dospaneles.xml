@@ -6,7 +6,7 @@
     android:baselineAligned="false"
     android:divider="?android:attr/dividerHorizontal"
     android:orientation="horizontal"
-    android:background="#77FF03"
+    android:background="#77DD77"
     android:showDividers="middle" >
 
     <fragment
